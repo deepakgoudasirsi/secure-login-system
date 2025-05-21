@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h2 class="text-center">Dashboard</h2>
+    </div>
+    <div class="card-body">
+        <div class="text-center mb-4">
+            <h3>Welcome, {{ current_user.email }}!</h3>
+            <p class="text-muted">You are successfully logged in with multi-factor authentication.</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Account Security</h5>
+                        <p class="card-text">Your account is protected with:</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">✓ Email Verification</li>
+                            <li class="list-group-item">✓ CAPTCHA Protection</li>
+                            <li class="list-group-item">✓ OTP Authentication</li>
+                            <li class="list-group-item">✓ Password Hashing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Account Information</h5>
+                        <p class="card-text">Email: {{ current_user.email }}</p>
+                        <p class="card-text">Account Status: 
+                            <span class="badge bg-success">Verified</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+</div>
+{% endblock %} 

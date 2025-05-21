@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h2 class="text-center">Verify OTP</h2>
+    </div>
+    <div class="card-body">
+        <p class="text-center">Please enter the OTP sent to your email address.</p>
+        
+        <form method="POST" action="{{ url_for('verify_otp') }}">
+            <div class="mb-3">
+                <label for="otp" class="form-label">OTP Code</label>
+                <input type="text" class="form-control" id="otp" name="otp" required 
+                       placeholder="Enter 6-digit OTP" pattern="[0-9]{6}" maxlength="6">
+            </div>
+            
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Verify OTP</button>
+            </div>
+        </form>
+        
+        <div class="text-center mt-3">
+            <p>Didn't receive the OTP? <a href="{{ url_for('login') }}">Try again</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %} 
