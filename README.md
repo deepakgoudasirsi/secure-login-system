@@ -102,7 +102,3 @@ secure-login-system/
 └── instance/         # Database files (created automatically)
     └── users.db
 ```
-
-## Contributing
-
-Feel free to submit issues and enhancement requests! 
