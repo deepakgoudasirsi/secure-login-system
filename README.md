@@ -21,7 +21,7 @@ A secure authentication system built with Python, Flask, and SQL that implements
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/deepakgoudasirsi/secure-login-system.git
 cd secure-login-system
 ```
 
@@ -102,3 +102,11 @@ secure-login-system/
 └── instance/         # Database files (created automatically)
     └── users.db
 ```
+
+---
+
+## Contact
+
+* **Deepak Gouda**
+  [GitHub @deepakgoudasirsi](https://github.com/deepakgoudasirsi)
+  [LinkedIn: Deepak Gouda](https://linkedin.com/in/deepakgoudasirsi)
